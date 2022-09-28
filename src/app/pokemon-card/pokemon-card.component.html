@@ -1,1 +1,30 @@
-<p>pokemon-card works!</p>
+<div class="pokemon-card" *ngIf="pokemon.status" [class]="pokemon.status.types[0].type.name.toLowerCase()">
+  <div class="pokemon-card__info">
+    <h1 class="pokemon-card__info__name">{{ capitalizeFirstLetter(pokemon.name) }}</h1>
+    <div class="pokemon-card__info__types">
+      <span
+        class="pokemon-card__info__types__item grass"
+        *ngFor="let value of pokemon.status.types"
+        [class]="value.type.name.toLowerCase()">
+      {{capitalizeFirstLetter(value.type.name)}}
+    </span>
+    </div>
+  </div>
+
+  <div class="pokemon-card__number">
+    <span class="pokemon-card__number__text">Nº {{ leadingZero(pokemon.status.id) }}</span>
+  </div>
+
+  <div class="pokemon-card__image">
+    <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+leadingZero(pokemon.status.id)+'.png'" alt="Pokemon image"
+      class="pokemon-card__image__media">
+  </div>
+
+  <div class="pokemon-card__okeball">
+    <img src="assets/imgs/okeball.png" alt="Pokeball image" class="pokemon-card__okeball__media">
+  </div>
+
+  <div class="pokemon-card__details">
+
+  </div>
+</div>
