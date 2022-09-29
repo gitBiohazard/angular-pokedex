@@ -1,6 +1,6 @@
 <div class="pokemon-search">
   <form class="pokemon-search__form">
-    <input type="text" class="pokemon-search__form__input" placeholder="Search here by Pokémon name">
+    <input type="text" class="pokemon-search__form__input" placeholder="Search here by Pokémon name" #key (keyup)="search(key.value)">
     <button class="pokemon-search__form__button">
       <img class="pokemon-search__form__button__icon" src="assets/imgs/search.png" alt="Search icon" aria-hidden>
     </button>

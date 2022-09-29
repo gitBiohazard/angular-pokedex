@@ -23,7 +23,7 @@ import { PokemonSearchComponent } from './pokemon-search/pokemon-search.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]

@@ -4,6 +4,9 @@
   margin: 0 auto;
   margin-top: 12rem;
   text-align: end;
+  position: sticky;
+  top: 2rem;
+  z-index: 3;
 }
 
 .pokemon-search {
@@ -12,9 +15,6 @@
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 0 5rem #c9c9c9;
-  position: sticky;
-  top: 2rem;
-  z-index: 3;
 }
 
 .pokemon-search__form {
