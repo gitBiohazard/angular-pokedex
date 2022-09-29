@@ -25,6 +25,17 @@
   </div>
 
   <div class="pokemon-card__details">
-
+    <h1 class="pokemon-card__details__title">Stats details</h1>
+    <div class="pokemon-card__details__stats">
+      <ul class="pokemon-card__details__stats__list">
+        <li class="pokemon-card__details__stats__list__item" *ngFor="let item of pokemon.status.stats">
+          <span>{{item.stat.name}}</span>
+          <span>{{item.base_stat}}</span>
+        </li>
+      </ul>
+      <div class="pokemon-card__details__stats__overlay">
+          <a class="pokemon-card__details__stats__overlay__button" [href]="pokemon.url" target="blank">View more</a>
+      </div>
+    </div>
   </div>
 </div>

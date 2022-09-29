@@ -49,7 +49,7 @@
   }
 
   &.psychic {
-    background: linear-gradient(-45deg, #ff47c8 , #ac1cff );
+    background: linear-gradient(-45deg, #ff47c8, #ac1cff);
   }
 
   &.rock {
@@ -189,15 +189,6 @@
   }
 }
 
-.pokemon-card__details {
-  background: white;
-  width: 100%;
-  height: 42%;
-  position: absolute;
-  bottom: 0;
-  border-radius: 2rem 2rem 0 0;
-}
-
 .pokemon-card__image {
   width: 60%;
   position: absolute;
@@ -224,7 +215,82 @@
 }
 
 @keyframes spin {
-  to{
+  to {
     transform: rotate(360deg);
+  }
+}
+
+.pokemon-card__details {
+  background: white;
+  width: 100%;
+  height: 42%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem;
+  padding-top: 4rem;
+
+  &:hover {
+    .pokemon-card__details__stats__overlay {
+      opacity: 1;
+
+      &__button {
+        opacity: 1;
+        bottom: 2rem;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Ubuntu', sans-serif;
+    color: #131313;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  &__stats {
+    position: relative;
+  }
+
+  &__stats__list__item {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+    color: #131313;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: .25rem 0;
+  }
+}
+
+.pokemon-card__details__stats__overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #fff, #fff);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .6s;
+
+  &__button {
+    padding: 1.2rem 2.2rem;
+    border-radius: 4rem;
+    background: #131313;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    transition: background .4s, opacity .4s, bottom .4s;
+    position: absolute;
+    opacity: 0;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    &:hover {
+      background: #000;
+    }
   }
 }
