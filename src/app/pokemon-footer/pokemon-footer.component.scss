@@ -1,3 +1,5 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+
 .pokemon-footer {
   position: relative;
   height: 30vh;
@@ -19,6 +21,10 @@
   font-weight: bold;
   font-size: 5rem;
   color: #131313;
+
+  @include media('<=tablet') {
+    font-size: 10rem;
+  }
 }
 
 .pokemon-footer__social__icons {
@@ -39,6 +45,11 @@
     height: 7rem;
     transition: transform .4s, box-shadow .4s;
 
+    @include media('<=tablet') {
+      width: 12rem;
+      height: 12rem;
+    }
+
     &.g {
       --light: #1a98f8;
     }
@@ -58,6 +69,10 @@
 
     img {
       width: 4rem;
+      @include media('<=tablet') {
+        width: 8rem;
+        height: 8rem;
+      }
     }
   }
 }
