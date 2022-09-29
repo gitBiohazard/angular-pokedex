@@ -11,6 +11,7 @@ import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.componen
 import { PokemonFooterComponent } from './pokemon-footer/pokemon-footer.component';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 import { PokemonTrainerComponent } from './pokemon-trainer/pokemon-trainer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { PokemonTrainerComponent } from './pokemon-trainer/pokemon-trainer.compo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]
