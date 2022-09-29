@@ -1,0 +1,63 @@
+.pokemon-trainer {
+  position: fixed;
+  z-index: 10;
+  bottom: 3rem;
+  right: 3rem;
+  background: #fff;
+  box-shadow: 0 0 5rem #898989;
+  padding: .75rem;
+  border-radius: 4rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: #131313;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &__media {
+    width: 5rem;
+  }
+
+  span {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    text-align: start;
+    padding: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transition: width .4s, padding .4s, opacity .4s;
+  }
+
+  &:hover {
+    span {
+      width: 17rem;
+      padding: 0 1rem;
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '1';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    background: #2d76ff;
+    transition: opacity .4s;
+  }
+}

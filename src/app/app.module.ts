@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.component';
 import { PokemonFooterComponent } from './pokemon-footer/pokemon-footer.component';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
+import { PokemonTrainerComponent } from './pokemon-trainer/pokemon-trainer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PokemonSearchComponent } from './pokemon-search/pokemon-search.componen
     PokemonCardComponent,
     PokemonHeaderComponent,
     PokemonFooterComponent,
-    PokemonSearchComponent
+    PokemonSearchComponent,
+    PokemonTrainerComponent
   ],
   imports: [
     BrowserModule,
