@@ -1,3 +1,6 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+
+
 .pokemon-card {
   width: 35rem;
   height: 50rem;
@@ -7,6 +10,11 @@
   overflow: hidden;
   transition: transform .6s;
   box-shadow: 0 0 15rem #c9c9c9;
+
+  @include media('<=tablet') {
+    width: 100%;
+    height: 75rem;
+  }
 
   &.grass {
     background: #49D0B0;
@@ -92,6 +100,10 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.6rem;
     font-weight: 500;
+
+    @include media('<=tablet') {
+      font-size: 7rem;
+    }
   }
 
   &__types {
@@ -104,6 +116,10 @@
       color: #fff;
       font-weight: 500;
       border-radius: 3rem;
+
+      @include media('<=tablet') {
+        font-size: 2.4rem;
+      }
 
       &.grass {
         background: rgba($color: #08A37E, $alpha: .5);
@@ -186,6 +202,10 @@
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 600;
+
+    @include media('<=tablet') {
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -230,6 +250,10 @@
   padding: 2rem;
   padding-top: 4rem;
 
+  @include media('<=tablet') {
+    padding-top: 6rem;
+  }
+
   &:hover {
     .pokemon-card__details__stats__overlay {
       opacity: 1;
@@ -247,6 +271,10 @@
     font-weight: 500;
     font-size: 3rem;
     text-align: center;
+
+    @include media('<=tablet') {
+      font-size: 5rem;
+    }
   }
 
   &__stats {
@@ -262,11 +290,15 @@
     text-transform: uppercase;
     font-weight: 500;
     margin: .5rem 0;
+
+    @include media('<=tablet') {
+      font-size: 2.4rem;
+    }
   }
 }
 
 .pokemon-card__details__stats__overlay {
-  width: 100%;
+  width: 101%;
   height: 100%;
   background: linear-gradient(to bottom, transparent, #fff, #fff);
   position: absolute;
@@ -288,6 +320,10 @@
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+
+    @include media('<=tablet') {
+      font-size: 3rem;
+    }
 
     &:hover {
       background: #000;
